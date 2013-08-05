@@ -135,3 +135,38 @@ private String wrap(String s, int width) {
     return s;
 }
 ```
+
+## 8.3 refactor
+
+assertThat(wrap(null, 1), is("")); 구조가 반복(3번)된다.
+
+- null -> s, 1 -> width, "" -> expected로 extract variable
+- assertWraps(s, width, expected)로 extract method한다.
+- 동일한 구조를 다른 2 라인도 extract method가 적용되도록 한다.
+- 그리고 s, width, expected를 inline한다.
+- assertWraps 메소드를 should_wrap 테스트 메소드 위로 이동시킨다.
+
+```
+private void assertWraps(String s, int width, String expected) {
+    assertThat(wrap(s, width), is(expected));
+}
+
+@Test
+public void
+should_wrap() {
+    assertWraps(null, 1, "");
+    assertWraps("", 1, "");
+    assertWraps("x", 1, "x");
+}
+```
+
+# 9.assertWraps("xx", 1, "x\nx")
+
+first, simplest condition that can break를 테스트 케이스로 추가한다.
+
+## 9.1 add failing test
+add failing test for assertWraps("xx", 1, "x\nx");
+
+```
+assertWraps("xx", 1, "x\nx");
+```
