@@ -13,6 +13,6 @@ public class WrapperTest {
     }
 
     private String wrap(String s, int width) {
-        return null;
+        return "";
     }
 }

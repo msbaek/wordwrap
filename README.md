@@ -105,3 +105,7 @@ assertThat(wrap("a dog with a bone", 6), is("a dog\nwidth a\nbone"));
 ```
 assertThat(wrap(null, 1), is(""));
 ```
+
+## 6.2 make it pass
+
+`return null;` 대신 `return "";`로 테스트를 성공시킴
