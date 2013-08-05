@@ -220,3 +220,13 @@ return s.substring(0, width) + "\n" + wrap(s.substring(width).trim(), width);
 ```
 
 trim()을 적용
+
+# 12.assertWraps("x xx", 3, "x\nxx");
+
+## 12.1 add failing test
+
+- width가 공백 뒤에 오는 단어의 일부를 포함하는 경우
+
+```
+assertWraps("x xx", 3, "x\nxx");
+```
