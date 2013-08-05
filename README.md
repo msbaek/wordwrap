@@ -52,3 +52,13 @@ private String wrap(String s, int width) {
 ```
 - with little golf game
 - 최소한의 타이핑으로 성공하도록 한다.
+
+# 3. wrap("a dog", 5)
+
+## 3.1 add failing test
+
+```
+assertThat(wrap("a dog", 5), is("a dog"));
+```
+
+이 테스트를 추가하고 나니 뭘 해야 할지 바로 떠 오르지 않는다. 이때 조심해야 한다. **getting stuck**될 것 같기 때문이다.

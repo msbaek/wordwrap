@@ -10,6 +10,7 @@ public class WrapperTest {
     public void
     should_wrap() {
         assertThat(wrap("word word", 4), is("word\nword"));
+        assertThat(wrap("a dog", 5), is("a dog"));
     }
 
     private String wrap(String s, int width) {
