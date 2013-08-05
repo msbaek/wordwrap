@@ -202,3 +202,13 @@ private String wrap(String s, int width) {
         return s.substring(0, width) + "\n" + wrap(s.substring(width), width);
 }
 ```
+
+# 11. assertWraps("x x", 1, "x\nx")
+
+## 11. add failing test
+
+space가 포함된 경우에 대한 실패하는 테스트 추가
+
+```
+assertWraps("x x", 1, "x\nx");
+```
