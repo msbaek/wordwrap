@@ -125,3 +125,13 @@ assertThat(wrap("", 1), is(""));
 ```
 assertThat(wrap("x", 1), is("x"));
 ```
+
+## 8.2 make it pass
+
+```
+private String wrap(String s, int width) {
+    if(s == null)
+        return "";
+    return s;
+}
+```
