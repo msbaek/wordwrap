@@ -189,3 +189,16 @@ private String wrap(String s, int width) {
 ## 10.1 add failing test
 
 add failing test for multiple lines("xxx", 1)
+
+## 10.2 make it work
+
+```
+private String wrap(String s, int width) {
+    if(s == null)
+        return "";
+    if(s.length() <= width)
+        return s;
+    else
+        return s.substring(0, width) + "\n" + wrap(s.substring(width), width);
+}
+```
