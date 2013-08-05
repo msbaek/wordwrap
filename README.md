@@ -109,3 +109,11 @@ assertThat(wrap(null, 1), is(""));
 ## 6.2 make it pass
 
 `return null;` 대신 `return "";`로 테스트를 성공시킴
+
+# 7. wrap(“”, 1)
+
+## 7.2 add failing test
+
+```
+assertThat(wrap("", 1), is(""));
+```

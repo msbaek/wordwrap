@@ -10,6 +10,7 @@ public class WrapperTest {
     public void
     should_wrap() {
         assertThat(wrap(null, 1), is(""));
+        assertThat(wrap("", 1), is(""));
     }
 
     private String wrap(String s, int width) {
