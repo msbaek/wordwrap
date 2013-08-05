@@ -14,6 +14,6 @@ public class WrapperTest {
     }
 
     private String wrap(String s, int width) {
-        return s.replaceAll(" ", "\n");
+        return s.length() > width ? s.replaceAll(" ", "\n") : s;
     }
 }

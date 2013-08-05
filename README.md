@@ -62,3 +62,13 @@ assertThat(wrap("a dog", 5), is("a dog"));
 ```
 
 이 테스트를 추가하고 나니 뭘 해야 할지 바로 떠 오르지 않는다. 이때 조심해야 한다. **getting stuck**될 것 같기 때문이다.
+
+## 3.2 make it pass
+
+```
+return s.length() > width ? s.replaceAll(" ", "\n") : s;
+```
+
+이렇게 함으로써 문제를 해결한 듯 하다.
+
+근데 specific production code로 둘러 쌓였다. generalization factor를 잃었다. 만일 빨리 이 문제에서 back out(철회, 탈퇴, 취소)하지 않으면 우리는 상당히 stuck(꼼짝 달싹 못하다)하게 될 것이다.
