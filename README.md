@@ -90,3 +90,10 @@ assertThat(wrap("a dog with a bone", 6), is("a dog\nwidth a\nbone"));
 정말 stuck(꼼짝 달싹 못하는) 상태에 빠졌다.
 
 이제 명확해 졌다. 이 테스트를 패스시키는 유일한 방법은 알고리즘을 다시 작성하는 것 뿐이다. 지금껏 작성한 모든 것을 버리고 처음부터 다시 작성해야 한다.
+
+# 5. Getting Unstuck
+
+- most degenerate test case를 먼저 작성하고
+- 이 복잡함 퀴즈를 아주 작은 스텝씩 올라가자.
+- 각 경우에서 해당 테스트를 통과시키도록 specific한 fix를 하는 것이 아니라 
+- production code를 generalizing하여 테스트가 통과되도록 하자.
