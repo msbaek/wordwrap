@@ -170,3 +170,16 @@ add failing test for assertWraps("xx", 1, "x\nx");
 ```
 assertWraps("xx", 1, "x\nx");
 ```
+
+## 9.2 make it pass
+
+```
+private String wrap(String s, int width) {
+    if(s == null)
+        return "";
+    if(s.length() <= width)
+        return s;
+    else
+        return s.substring(0, width) + "\n" + s.substring(width);
+}
+```
