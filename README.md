@@ -80,3 +80,13 @@ return s.length() > width ? s.replaceAll(" ", "\n") : s;
 ```
 assertThat(wrap("a dog with a bone", 6), is("a dog\nwidth a\nbone"));
 ```
+
+## 4.1 make it pass
+
+어떻게 이 케이스를 패스시킬까 ?
+
+이미 늦었다. 탈출이 불가능하다.
+
+정말 stuck(꼼짝 달싹 못하는) 상태에 빠졌다.
+
+이제 명확해 졌다. 이 테스트를 패스시키는 유일한 방법은 알고리즘을 다시 작성하는 것 뿐이다. 지금껏 작성한 모든 것을 버리고 처음부터 다시 작성해야 한다.
