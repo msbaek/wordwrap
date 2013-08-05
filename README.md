@@ -22,3 +22,12 @@ TDD를 어느 정도 해 봤다면 "getting stuck"을 경험해 봤을 것이다
 - 위의 두 문제를 모두 했거나
 
 이 예제에서는 word wrap의 경우로 설명한다.
+# 1. Test를 작성
+
+```
+public class WrapperTest {
+    @Test
+    public void nothing() {
+    }
+}
+```
