@@ -117,3 +117,11 @@ assertThat(wrap(null, 1), is(""));
 ```
 assertThat(wrap("", 1), is(""));
 ```
+
+# 8. wrap(“x”, 1)
+이제 생각나는 most degenerate test case는 wrap(“x”, 1)이다.
+## 8.1 add failing test
+
+```
+assertThat(wrap("x", 1), is("x"));
+```

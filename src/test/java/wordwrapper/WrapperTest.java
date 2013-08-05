@@ -11,6 +11,7 @@ public class WrapperTest {
     should_wrap() {
         assertThat(wrap(null, 1), is(""));
         assertThat(wrap("", 1), is(""));
+        assertThat(wrap("x", 1), is("x"));
     }
 
     private String wrap(String s, int width) {
