@@ -183,3 +183,9 @@ private String wrap(String s, int width) {
         return s.substring(0, width) + "\n" + s.substring(width);
 }
 ```
+
+# 10. assertWraps("xxx", 1)
+
+## 10.1 add failing test
+
+add failing test for multiple lines("xxx", 1)
