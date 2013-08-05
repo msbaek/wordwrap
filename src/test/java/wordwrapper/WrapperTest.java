@@ -27,7 +27,11 @@ public class WrapperTest {
             return "";
         if(s.length() <= width)
             return s;
-        else
-            return s.substring(0, width) + "\n" + wrap(s.substring(width).trim(), width);
+        else {
+            int breakPoint = s.lastIndexOf(" ", width);
+            if(breakPoint == -1)
+                breakPoint = width;
+            return s.substring(0, breakPoint) + "\n" + wrap(s.substring(breakPoint).trim(), width);
+        }
     }
 }

@@ -230,3 +230,20 @@ trim()을 적용
 ```
 assertWraps("x xx", 3, "x\nxx");
 ```
+
+## 12.2 make it work
+
+```
+private String wrap(String s, int width) {
+    if(s == null)
+        return "";
+    if(s.length() <= width)
+        return s;
+    else {
+        int breakPoint = s.lastIndexOf(" ", width);
+        if(breakPoint == -1)
+            breakPoint = width;
+        return s.substring(0, breakPoint) + "\n" + wrap(s.substring(breakPoint).trim(), width);
+    }
+}
+```
