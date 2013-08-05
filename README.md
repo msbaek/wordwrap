@@ -33,4 +33,22 @@ public class WrapperTest {
 ```
 
 # 2. wrap("word word", 4)
+
 ## 2.1 add failing test
+
+```
+@Test public void
+should_wrap() {
+    assertThat(wrap("word word", 4), is("word\nword"));
+}
+```
+
+## 2.2 make it pass
+
+```
+private String wrap(String s, int width) {
+    return s.replaceAll(" ", "\n");
+}
+```
+- with little golf game
+- 최소한의 타이핑으로 성공하도록 한다.
