@@ -97,3 +97,11 @@ assertThat(wrap("a dog with a bone", 6), is("a dog\nwidth a\nbone"));
 - 이 복잡함 퀴즈를 아주 작은 스텝씩 올라가자.
 - 각 경우에서 해당 테스트를 통과시키도록 specific한 fix를 하는 것이 아니라 
 - production code를 generalizing하여 테스트가 통과되도록 하자.
+
+# 6. wrap(null, 1)
+
+## 6.1 add failing test
+
+```
+assertThat(wrap(null, 1), is(""));
+```
