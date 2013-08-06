@@ -247,3 +247,8 @@ private String wrap(String s, int width) {
     }
 }
 ```
+
+# 13. complex case
+
+## 13.1 add failing test
+`assertWraps("four score and seven years ago our fathers brought forth upon this continent", 7, "four\nscore\nand\nseven\nyears\nago our\nfathers\nbrought\nforth\nupon\nthis\ncontine\nnt");`
